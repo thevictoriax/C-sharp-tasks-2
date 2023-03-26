@@ -9,13 +9,17 @@ Zalik zalik2 = new Zalik("ТІ", "Заболоцький", 70);
 Zalik zalik3 = new Zalik("Алгоритми", "Костів", 64); 
 Zalik zalik4 = new Zalik("БД", "Костів", 59); 
 Zalik zalik5 = new Zalik("ТІМС", "Притула", 47);
+Zalik zalik6 = (Zalik)zalik1.Clone();
+zalik6.Teacher = "Музичук";
+zalik6.Grade = 89;
+
 Exam exam1 = new Exam("OP", "Ярошко", "Assistant 1", 99);
 Exam exam2 = new Exam("ТІ", "Заболоцький", "Assistant 2", 86);
 Exam exam3 = new Exam("Алгоритми", "Костів", "Assistant 3", 75);
 Exam exam4 = new Exam("БД", "Костів", "Assistant 4", 63);
 Exam exam5 = new Exam("ТІМС", "Притула", "Assistant 5", 51);
 
-List<Zalik> container = new List<Zalik>() { zalik1, zalik2, zalik3, zalik4, zalik5, exam1, exam2, exam3, exam4, exam5 };
+List<Zalik> container = new List<Zalik>() { zalik1, zalik2, zalik3, zalik4, zalik5, zalik6, exam1, exam2, exam3, exam4, exam5 };
 
 InputDiscipline();
 

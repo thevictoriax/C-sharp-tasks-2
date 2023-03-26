@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ОЧ2
 {
-    public class Zalik: IComparable<Zalik>
+    public class Zalik: IComparable<Zalik>, ICloneable
     {
         public string Subject { get; protected set; }
-        public string Teacher { get; protected set; }
-        public int Grade { get; protected set; }
+        public string Teacher { get; set; }
+        public int Grade { get; set; }
 
 
         public Zalik()
@@ -32,6 +32,13 @@ namespace ОЧ2
         {
             return Grade.CompareTo(other.Grade);
         }
+
+        public object Clone()
+        {
+            Zalik clone = new Zalik(Subject, "", 0);
+            return clone;
+        }
+
 
         public static bool  operator < (Zalik lhs, Zalik rhs)
         {

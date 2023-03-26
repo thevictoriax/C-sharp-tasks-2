@@ -1,0 +1,15 @@
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\bin\Debug\net6.0\ОЧ2.exe
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\bin\Debug\net6.0\ОЧ2.deps.json
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\bin\Debug\net6.0\ОЧ2.runtimeconfig.json
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\bin\Debug\net6.0\ОЧ2.dll
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\bin\Debug\net6.0\ОЧ2.pdb
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\obj\Debug\net6.0\ОЧ2.csproj.AssemblyReference.cache
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\obj\Debug\net6.0\ОЧ2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\obj\Debug\net6.0\ОЧ2.AssemblyInfoInputs.cache
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\obj\Debug\net6.0\ОЧ2.AssemblyInfo.cs
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\obj\Debug\net6.0\ОЧ2.csproj.CoreCompileInputs.cache
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\obj\Debug\net6.0\ОЧ2.dll
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\obj\Debug\net6.0\refint\ОЧ2.dll
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\obj\Debug\net6.0\ОЧ2.pdb
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\obj\Debug\net6.0\ОЧ2.genruntimeconfig.cache
+C:\Users\vitam\source\repos\ОЧ2\ОЧ2\obj\Debug\net6.0\ref\ОЧ2.dll
