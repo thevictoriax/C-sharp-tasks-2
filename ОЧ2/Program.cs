@@ -29,70 +29,70 @@ foreach (Zalik containerItem in container)
 Console.WriteLine();
 
 // Finds object with the greatest score
-//var bestSubject = new Zalik();
-//for(int i = 0; i < container.Count; i++)
-//{
-//    if (container[i] > bestSubject)
-//    {
-//        bestSubject = container[i];
-//    }
-//}
+var bestSubject = new Zalik();
+for(int i = 0; i < container.Count; i++)
+{
+    if (container[i] > bestSubject)
+    {
+        bestSubject = container[i];
+    }
+}
 
-//// Check out Exam type  
-//if (bestSubject.GetType() == typeof(Exam))
-//    Console.WriteLine("object with the best score: Іспит");
-//else
-//    Console.WriteLine("object with the best score: Залік");
+// Check out Exam type  
+if (bestSubject.GetType() == typeof(Exam))
+    Console.WriteLine("object with the best score: Іспит");
+else
+    Console.WriteLine("object with the best score: Залік");
 
-//if (bestSubject is Exam)
-//    Console.WriteLine("object with the best score: Іспит");
-//else
-//    Console.WriteLine("object with the best score: Залік");
+if (bestSubject is Exam)
+    Console.WriteLine("object with the best score: Іспит");
+else
+    Console.WriteLine("object with the best score: Залік");
 
-//// Differnce between total zaliks' and exams' scores
-//int totZaliks = 0;
-//int totExams = 0;
-//foreach (var containerItem in container)
-//{
-//    if(containerItem is Exam)
-//    {
-//        totExams += containerItem.Grade;
-//    }
-//    else
-//    {
-//        totZaliks += containerItem.Grade;
-//    }
-//}
-//Console.WriteLine($"\nDiffernce between total zaliks' and exams' scores equals to: {Math.Abs(totZaliks-totExams)}");
+// Differnce between total zaliks' and exams' scores
+int totZaliks = 0;
+int totExams = 0;
+foreach (var containerItem in container)
+{
+    if(containerItem is Exam)
+    {
+        totExams += containerItem.Grade;
+    }
+    else
+    {
+        totZaliks += containerItem.Grade;
+    }
+}
+Console.WriteLine($"\nDiffernce between total zaliks' and exams' scores equals to: {Math.Abs(totZaliks-totExams)}");
 
-//Zalik minFinal = container.Min();
-//Zalik maxFinal = container.Max();
-//Console.WriteLine($"The worst subject: {minFinal}");
-//Console.WriteLine($"The best subject: {maxFinal}");
-//Console.WriteLine($"Differnce between max and minimum finals' scores equals to: {maxFinal - minFinal}");
+Zalik minFinal = container.Min();
+Zalik maxFinal = container.Max();
+Console.WriteLine($"The worst subject: {minFinal}");
+Console.WriteLine($"The best subject: {maxFinal}");
+Console.WriteLine($"Differnce between max and minimum finals' scores equals to: {maxFinal - minFinal}");
 
-//// Check on failed exams
-//int failedCounter = 0;
+// Check on failed exams
+int failedCounter = 0;
 
-//foreach (var containerItem in container)
-//{
-//    if (containerItem.Grade < 51)
-//        failedCounter++;
-//}
+foreach (var containerItem in container)
+{
+    if (containerItem.Grade < 51)
+        failedCounter++;
+}
 
-//Console.WriteLine($"\nFailed exams: {failedCounter}");
+Console.WriteLine($"\nFailed exams: {failedCounter}");
 
-//// Create new collection based on a certain teacher
-//List<Zalik> teachersList = new List<Zalik>();
-//string teacherName = "Ярошко";
-//foreach (var containerItem in container)
-//{
-//    if (containerItem.Teacher == teacherName)
-//        teachersList.Add(containerItem);
-//}
-//Console.WriteLine($"\nІспити/заліки викладача {teacherName}:");
-//foreach (var item in teachersList)
-//    Console.WriteLine(item);
+// Create new collection based on a certain teacher
+List<Zalik> teachersList = new List<Zalik>();
+string teacherName = "Ярошко";
+foreach (var containerItem in container)
+{
+    if (containerItem.Teacher == teacherName)
+        teachersList.Add(containerItem);
+}
+Console.WriteLine($"\nІспити/заліки викладача {teacherName}:");
+foreach (var item in teachersList)
+    Console.WriteLine(item);
 
 void InputDiscipline()
 {

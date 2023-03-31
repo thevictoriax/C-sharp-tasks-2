@@ -39,25 +39,21 @@ namespace ОЧ2
         public event EventHandler GradeSatisfactory;
         public event EventHandler GradeGood;
         public event EventHandler GradePerfect;
+        public event EventHandler GradeBad;
 
         public Zalik()
         {
-            subject = string.Empty;
+            Subject = string.Empty;
             Teacher = string.Empty; 
             Grade = 0;
-
-            //SubscribeToGradeSatisfactoryEvent();
-            //SubscribeToGradeGoodEvent();
-            //SubscribeToGradePerfectEvent();
         }
            
 
 
         public Zalik(string _subject, string _teacher, int _grade) 
         {
-            GradeSatisfactory += ThisGradeSatisfactory;
             Grade = _grade >= 100 ? 100 : _grade;
-            subject = _subject;
+            Subject = _subject;
             Teacher = _teacher;
 
             SubscribeToGradeSatisfactoryEvent();
@@ -111,11 +107,11 @@ namespace ОЧ2
         {
             if (Grade >50)
             {
-                return $"{subject} , {Teacher} , {Grade} - зараховано ";
+                return $"{Subject} , {Teacher} , {Grade} - зараховано ";
             }
             else
             {
-                return $"{subject} , {Teacher} , {Grade} - НЕ зараховано ";
+                return $"{Subject} , {Teacher} , {Grade} - НЕ зараховано ";
             }
         }
 
