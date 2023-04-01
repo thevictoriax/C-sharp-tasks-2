@@ -21,7 +21,7 @@ Exam exam5 = new Exam("ТІМС", "Притула", "Assistant 5", 51);
 
 List<Zalik> container = new List<Zalik>() { zalik1, zalik2, zalik3, zalik4, zalik5, zalik6, exam1, exam2, exam3, exam4, exam5 };
 
-InputDiscipline();
+//InputDiscipline();
 
 foreach (Zalik containerItem in container)
     Console.WriteLine(containerItem);
@@ -40,14 +40,14 @@ for(int i = 0; i < container.Count; i++)
 
 // Check out Exam type  
 if (bestSubject.GetType() == typeof(Exam))
-    Console.WriteLine("oject with te best score: Іспит");
+    Console.WriteLine("object with the best score: Іспит");
 else
-    Console.WriteLine("oject with te best score: Залік");
+    Console.WriteLine("object with the best score: Залік");
 
 if (bestSubject is Exam)
-    Console.WriteLine("oject with te best score: Іспит");
+    Console.WriteLine("object with the best score: Іспит");
 else
-    Console.WriteLine("oject with te best score: Залік");
+    Console.WriteLine("object with the best score: Залік");
 
 // Differnce between total zaliks' and exams' scores
 int totZaliks = 0;
