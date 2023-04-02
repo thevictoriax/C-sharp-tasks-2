@@ -8,7 +8,17 @@ namespace ОЧ2
 {
     public class Zalik: IComparable<Zalik>, ICloneable
     {
-        public int Grade { get; set; }
+        private int grade;
+        public int Grade {
+            get => grade;
+            set
+            {
+                OnReview(EventArgs.Empty);
+                Thread.Sleep(1000);
+                grade = value;
+                Console.WriteLine("Роботу перевірено, результат: {0}", grade);
+            }
+        }
         public string Teacher { get; set; }
         private string subject;
 
@@ -31,8 +41,8 @@ namespace ОЧ2
                 return subject; 
             }
             set 
-            { 
-                subject = value; 
+            {
+                subject = value;
             }
         }
 
@@ -40,6 +50,7 @@ namespace ОЧ2
         public event EventHandler GradeGood;
         public event EventHandler GradePerfect;
         public event EventHandler GradeBad;
+        public event EventHandler Review;
 
         public Zalik()
         {
@@ -52,14 +63,14 @@ namespace ОЧ2
 
         public Zalik(string _subject, string _teacher, int _grade) 
         {
-            Grade = _grade >= 100 ? 100 : _grade;
+            grade = _grade >= 100 ? 100 : _grade;
             Subject = _subject;
             Teacher = _teacher;
 
             SubscribeToGradeSatisfactoryEvent();
             SubscribeToGradeGoodEvent();
             SubscribeToGradePerfectEvent();
-
+            SubscribeToReview();
         }
 
         public int CompareTo(Zalik other)
@@ -173,6 +184,17 @@ namespace ОЧ2
             Console.WriteLine("Дисципліну здано відмінно!");
             Console.ResetColor();
         }
-
+        protected virtual void ThisReview(object sender, EventArgs e)
+        {
+            Console.WriteLine("Робота перевіряється");
+        }
+        private void SubscribeToReview()
+        {
+            Review += ThisReview;
+        }
+        protected virtual void OnReview(EventArgs e)
+        {
+            Review?.Invoke(this, e);
+        }
     }
 }
